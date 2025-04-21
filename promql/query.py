@@ -11,9 +11,6 @@ def query_execute(prom_url, promql = "up"):
         raise Exception(f"Error {response.status_code}: {response.text}")
     json_response = response.json()
 
-    # check if the response is valid
-    if len(json_response["data"]["result"]) == 0:
-       return f"Error: No data found for query '{promql}'"
     return json_response["data"]["result"]
 
 
