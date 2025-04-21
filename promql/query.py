@@ -1,6 +1,6 @@
 import requests
 
-def query_prometheus(prom_url, promql = "up"):
+def query_execute(prom_url, promql = "up"):
     # check if the response is not empty
     if not promql or not prom_url:
         return "Error: Prometheus URL or query is empty"
