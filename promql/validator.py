@@ -11,4 +11,8 @@ def is_valid_prometheus(prom_url):
         return False
     
     
- 
+def is_valid_promql(prom_url, promql):
+     response = requests.get(f"{prom_url}/api/v1/query", params={'query': promql})
+     json_response = response.json()
+     if len[json_response["data"]["result"]] == 0:
+         return f"Error: Invalid PromQL query"     
