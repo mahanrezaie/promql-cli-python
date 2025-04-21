@@ -1,4 +1,5 @@
 import requests
+# Function to validate if the given URL is a valid Prometheus instance
 
 def is_valid_prometheus(prom_url):
     try:
@@ -8,6 +9,6 @@ def is_valid_prometheus(prom_url):
         return False
     except requests.exceptions.RequestException:
         return False
-
-
     
+    
+ 
