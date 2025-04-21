@@ -10,7 +10,7 @@ def is_valid_prometheus(prom_url):
     except requests.exceptions.RequestException:
         return False
     
-    
+
 def is_valid_promql(prom_url, promql):
      response = requests.get(f"{prom_url}/api/v1/query", params={'query': promql})
      json_response = response.json()
