@@ -8,6 +8,7 @@ def main():
     parser = argparse.ArgumentParser(description="PromQL CLI Tool")
     parser.add_argument("host", help="The Prometheus server URL (e.g., http://localhost:9090)")
     parser.add_argument("promql", help="The PromQL query to execute")
+    parser.add_argument("-H", "--human", action="store_true", help="Format output as human-readable table")
     args = parser.parse_args()
 
     # Validate the Prometheus server
@@ -27,8 +28,12 @@ def main():
         sys.exit(0)
 
     # Format and display the results
-    formatted_table = formatters.human_readable(results)
-    print(formatted_table)
+    if args.human:
+        formatted_output = formatters.human_readable(results)
+    else:
+        formatted_output = formatters.raw(results)  # You need to implement or use an existing raw formatter
+
+    print(formatted_output)
 
 # Entry point
 if __name__ == "__main__":
