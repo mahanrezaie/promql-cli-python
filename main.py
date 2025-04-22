@@ -19,7 +19,7 @@ def load_host_from_config():
 def main():
     parser = argparse.ArgumentParser(description="PromQL CLI Tool")
     parser.add_argument("promql", help="The PromQL query to execute")
-    parser.add_argument("-i", "--host", help="The Prometheus server URL (overrides config.json)")
+    parser.add_argument("-e", "--endpoint", help="The Prometheus server URL (overrides config.json)")
     parser.add_argument("-H", "--human", action="store_true", help="Format output as human-readable table")
     args = parser.parse_args()
 
