@@ -24,7 +24,7 @@ def main():
     args = parser.parse_args()
 
     # Use host from flag if provided, otherwise from config
-    host = args.host if args.host else load_host_from_config()
+    host = args.endpoint if args.endpoint else load_host_from_config()
     if not host:
         print("Error: No host provided and none found in config.json.")
         sys.exit(1)
