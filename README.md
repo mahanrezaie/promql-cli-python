@@ -66,6 +66,7 @@ Contributions are welcome! Please open issues or submit pull requests.
 ## Future plans
 
 - Add setup.py
+- Normal authentication and tls
 
 ## 📄 License
 
