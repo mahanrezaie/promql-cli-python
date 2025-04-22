@@ -16,4 +16,4 @@ def is_valid_promql(prom_url, promql):
      json_response = response.json()
      if len[json_response["data"]["result"]] == 0:
          return False
-     return True     
+     return True    
