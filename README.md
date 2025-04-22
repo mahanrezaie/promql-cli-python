@@ -68,6 +68,3 @@ Contributions are welcome! Please open issues or submit pull requests.
 - Add setup.py
 - Normal authentication and tls
 
-## 📄 License
-
-MIT License
