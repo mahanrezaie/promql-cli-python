@@ -41,3 +41,6 @@ def human_readable(results):
     table = tabulate(table, headers=headers, tablefmt="grid")
     return table
     
+def raw(results):
+    # This function will return the raw JSON response
+    return results
